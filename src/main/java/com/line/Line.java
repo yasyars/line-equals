@@ -11,6 +11,6 @@ public class Line {
     }
 
     public double getLength() {
-        return Math.abs(this.x2 - this.x1) + (this.y2 - this.y1);
+        return Math.abs(this.x2 - this.x1) + Math.abs(this.y2 - this.y1);
     }
 }

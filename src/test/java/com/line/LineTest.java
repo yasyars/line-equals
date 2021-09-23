@@ -29,4 +29,10 @@ public class LineTest {
         Line line = new Line(1, 1, 1, 9);
         assertEquals(8, line.getLength(), 0.00001);
     }
+
+    @Test
+    public void getLengthWhenXsAreSameAndY1GreaterThanY2ShouldReturnAbsoluteDifferentBetweenY1Y2() {
+        Line line = new Line(1, 9, 1, 1);
+        assertEquals(8, line.getLength(), 0.00001);
+    }
 }
