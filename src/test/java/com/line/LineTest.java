@@ -17,4 +17,10 @@ public class LineTest {
         Line line = new Line(1, 1, 9, 1);
         assertEquals(8, line.getLength(), 0.00001);
     }
+
+    @Test
+    public void getLengthWhenYsAreSameAndX1GreaterThanX2ShouldReturnAbsoluteDifferentBetweenX1X2() {
+        Line line = new Line(9, 1, 1, 1);
+        assertEquals(8, line.getLength(), 0.00001);
+    }
 }
