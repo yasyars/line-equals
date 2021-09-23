@@ -1,6 +1,7 @@
 package com.line;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -47,5 +48,12 @@ public class LineTest {
     public void isEqualWhenComparedWithItselfShouldReturnTrue() {
         Line line = new Line(0, 0, 3, 4);
         assertTrue(line.isEqual(line));
+    }
+
+    @Test
+    public void isEqualWhenX1IsNotTheSameShouldReturnFalse() {
+        Line lineA = new Line(0, 0, 3, 4);
+        Line lineB = new Line(1, 0, 3, 4);
+        assertFalse(lineA.isEqual(lineB));
     }
 }
