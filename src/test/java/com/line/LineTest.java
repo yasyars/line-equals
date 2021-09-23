@@ -11,4 +11,10 @@ public class LineTest {
         Line line = new Line(1, 1, 1, 1);
         assertEquals(0, line.getLength(), 0.00001);
     }
+
+    @Test
+    public void getLengthWhenYsAreSameAndX1LessThanX2ShouldReturnDifferentBetweenX1X2() {
+        Line line = new Line(1, 1, 9, 1);
+        assertEquals(8, line.getLength(), 0.00001);
+    }
 }
