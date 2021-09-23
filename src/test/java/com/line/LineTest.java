@@ -1,6 +1,7 @@
 package com.line;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -40,5 +41,11 @@ public class LineTest {
     public void getLengthWhenXsAreDifferentAndYsAreDifferentShouldReturnEuclideanDistance() {
         Line line = new Line(0, 0, 3, 4);
         assertEquals(5, line.getLength(), 0.00001);
+    }
+
+    @Test
+    public void isEqualWhenComparedWithItselfShouldReturnTrue() {
+        Line line = new Line(0, 0, 3, 4);
+        assertTrue(line.isEqual(line));
     }
 }
