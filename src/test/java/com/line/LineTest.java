@@ -70,4 +70,11 @@ public class LineTest {
         Line lineB = new Line(0, 0, 1, 4);
         assertFalse(lineA.isEqual(lineB));
     }
+
+    @Test
+    public void isEqualWhenY2IsNotTheSameShouldReturnFalse() {
+        Line lineA = new Line(0, 0, 0, 2);
+        Line lineB = new Line(0, 0, 0, 4);
+        assertFalse(lineA.isEqual(lineB));
+    }
 }

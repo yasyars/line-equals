@@ -15,6 +15,6 @@ public class Line {
     }
 
     public boolean isEqual(Line otherLine) {
-        return this.x1 == otherLine.x1 && this.y1 == otherLine.y1 && this.x2 == otherLine.x2;
+        return this.x1 == otherLine.x1 && this.y1 == otherLine.y1 && this.x2 == otherLine.x2 && this.y2 == otherLine.y2;
     }
 }
