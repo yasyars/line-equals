@@ -35,4 +35,10 @@ public class LineTest {
         Line line = new Line(1, 9, 1, 1);
         assertEquals(8, line.getLength(), 0.00001);
     }
+
+    @Test
+    public void getLengthWhenXsAreDifferentAndYsAreDifferentShouldReturnEuclideanDistance() {
+        Line line = new Line(0, 0, 3, 4);
+        assertEquals(5, line.getLength(), 0.00001);
+    }
 }
